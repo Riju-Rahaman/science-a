@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-deepSpace text-slate-200 font-sans;
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-deepSpace;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-800 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-700;
+}
+
+/* Common components */
+.section-title {
+  @apply text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-quantum to-energy bg-clip-text text-transparent;
+}
+
+.card {
+  @apply bg-deepSpace-lighter border border-slate-800 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-glow;
+}
+
+.math-equation {
+  @apply font-mono text-lg md:text-xl leading-relaxed p-4 my-4 bg-slate-800/50 rounded-lg overflow-x-auto;
+}
+
+/* Gradient text effect */
+.gradient-text {
+  @apply bg-gradient-to-r from-quantum to-energy bg-clip-text text-transparent;
+}
+
+/* Button styles */
+.btn {
+  @apply px-6 py-2 rounded-md transition-all duration-200 font-medium;
+}
+
+.btn-primary {
+  @apply bg-quantum hover:bg-quantum/90 text-white;
+}
+
+.btn-secondary {
+  @apply bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700;
+}
+
+.btn-outline {
+  @apply border border-quantum text-quantum hover:bg-quantum/10;
+}
+
+/* Smooth transition for all interactive elements */
+a, button {
+  @apply transition-all duration-200;
+}
+
+/* Timeline styles */
+.timeline-line {
+  @apply absolute left-4 md:left-1/2 h-full w-px bg-gradient-to-b from-quantum via-energy to-cosmic -z-10;
+}
+
+.timeline-dot {
+  @apply absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-quantum transform -translate-x-1/2 z-10;
+}
+
+.timeline-card {
+  @apply ml-12 md:ml-0 md:w-[calc(50%-2rem)] relative;
+}
+
+.timeline-card-left {
+  @apply md:mr-auto;
+}
+
+.timeline-card-right {
+  @apply md:ml-auto;
+}
+
+/* For equation styling */
+.equation-variable {
+  @apply text-energy font-bold;
+}
+
+.equation-operator {
+  @apply text-cosmic mx-1;
+}
+
+.equation-number {
+  @apply text-slate-300;
+}
+
+.equation-symbol {
+  @apply text-quantum;
+}
